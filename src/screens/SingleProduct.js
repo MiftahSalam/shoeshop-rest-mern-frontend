@@ -77,11 +77,11 @@ const SingleProductScreen = () => {
                   </div>
                   <p>{product.description}</p>
                   <div className="product-count col-lg-7">
-                    <div className="flex-box d-flex justify-content-between align-items-cer">
+                    <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Price</h6>
                       <span>$ {product.price}</span>
                     </div>
-                    <div className="flex-box d-flex justify-content-between align-items-cer">
+                    <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Status</h6>
 
                       {product.countInStock > 0 ? (
@@ -90,7 +90,7 @@ const SingleProductScreen = () => {
                         <span>unavailable</span>
                       )}
                     </div>
-                    <div className="flex-box d-flex justify-content-between align-items-c">
+                    <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Reviews</h6>
                       <Rating
                         value={product.rating}

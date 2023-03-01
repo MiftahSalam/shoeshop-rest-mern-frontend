@@ -15,7 +15,6 @@ const ShopSection = (props) => {
   const { loading, error, products, page, pages } = listProduct;
 
   useEffect(() => {
-    console.log('ShopSection-useEffect');
     dispatch(productList(keyword, pageNumber));
   }, [dispatch, keyword, pageNumber]);
 

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import { logout } from '../redux/actions/user';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../redux/actions/user";
 
 function Header() {
-  const [keyword, setKeyword] = useState('');
+  const [keyword, setKeyword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
@@ -13,7 +13,6 @@ function Header() {
   const { userInfo } = loggedUser;
 
   const logoutHandler = () => {
-    console.log('logout');
     dispatch(logout());
   };
 
@@ -32,7 +31,7 @@ function Header() {
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
               <p>+225 768 356 890</p>
-              <p>info@zipnet.com</p>
+              <p>info@shoeshop.com</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <Link to="">
@@ -48,7 +47,7 @@ function Header() {
                 <i className="fab fa-youtube"></i>
               </Link>
               <Link to="">
-                {' '}
+                {" "}
                 <i className="fab fa-pinterest-p"></i>
               </Link>
             </div>
@@ -162,7 +161,7 @@ function Header() {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Hi, {userInfo.name}
+                      <i className="fas fa-user"></i>
                     </button>
                     <div className="dropdown-menu">
                       <Link className="dropdown-item" to="/profile">
@@ -179,11 +178,11 @@ function Header() {
                   </div>
                 ) : (
                   <>
-                    <Link to={'/register'}>Register</Link>
-                    <Link to={'/login'}>Login</Link>
+                    <Link to={"/register"}>Register</Link>
+                    <Link to={"/login"}>Login</Link>
                   </>
                 )}
-                <Link to={'/cart'}>
+                <Link to={"/cart"}>
                   <i className="fas fa-shopping-bag"></i>
                   <span className="badge">{cartItems.length}</span>
                 </Link>

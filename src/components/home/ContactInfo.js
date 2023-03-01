@@ -19,7 +19,7 @@ const ContactInfo = () => {
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h5>Headquarter</h5>
-            <p>Arusha Njiro Pepsi</p>
+            <p>Cilame, Bandung Barat</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
